@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Centru de Adopție Animale</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            transition: 0.4s;
+        }
+
+        /* DARK MODE */
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode table {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #814caf;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        /* HOVER TITLU */
+        .header h1 {
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .header h1:hover {
+            color: yellow;
+            transform: scale(1.05);
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        img {
+            border: 3px solid #894caf;
+            border-radius: 10px;
+            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #e68900;
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        th {
+            background-color: #8c4caf;
+            color: white;
+            padding: 10px;
+            transition: 0.4s;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        /* ------------------ TABLETA ------------------ */
+        @media screen and (min-width: 481px) and (max-width: 1000px) {
+
+            .header {
+                background-color: orange;
+            }
+
+            th {
+                background-color: orange;
+            }
+
+            img {
+                border-color: orange;
+            }
+        }
+
+        /* ------------------ TELEFON ------------------ */
+        @media screen and (max-width: 480px) {
+
+            .header {
+                background-color: red;
+            }
+
+            th {
+                background-color: red;
+            }
+
+            img {
+                border-color: red;
+            }
+
+            body {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Centru de Adopție Animale [DE BORȘAN DIANA]</h1>
+        <p>Găsește-ți noul prieten astăzi!</p>
+    </div>
+
+    <div class="container">
+
+        <div>
+            <h2>Animale Recomandate</h2>
+            <img src="animale.png" width="500" height="250">
+        </div>
+
+        <div>
+            <h2>Setări Temă</h2>
+
+            <button onclick="toggleMode()">
+                Dark/Light Mode Toggle
+            </button>
+        </div>
+
+        <div>
+            <h2>Animale Disponibile</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Nume</th>
+                    <th>Tip</th>
+                    <th>Vârstă</th>
+                </tr>
+
+                <tr>
+                    <td>Tobias</td>
+                    <td>Câine</td>
+                    <td>2 ani</td>
+                </tr>
+
+                <tr>
+                    <td>Temea</td>
+                    <td>Pisică</td>
+                    <td>1 an</td>
+                </tr>
+
+                <tr>
+                    <td>Alpina</td>
+                    <td>Șopârlă</td>
+                    <td>6 luni</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Află mai multe despre îngrijirea animalelor:</p>
+        <a href="">Apasă aici pentru informații</a>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>
